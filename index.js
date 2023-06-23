@@ -44,10 +44,13 @@ app.get("*", function (_, res) {
 
 const connectDB = async () => {
   try {
-    const conn = await mongoose.connect(process.env.CONNECTION_URL, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    const conn = await mongoose.connect(
+      "mongodb+srv://akashSingh:mongoAkash@cluster0.lxy5jzc.mongodb.net/",
+      {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+      }
+    );
     console.log(`MongoDB Connected: ${conn.connection.host}`);
   } catch (error) {
     console.log(error);
