@@ -39004,7 +39004,7 @@
         (Kc.HttpStatusCode = qc),
         (Kc.default = Kc);
       var Gc = Kc,
-        Xc = "http://localhost:5000/posts",
+        Xc = "http://localhost:3000/posts",
         Qc = function (e) {
           return Gc.get("".concat(Xc, "?page=").concat(e));
         },
