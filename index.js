@@ -18,6 +18,7 @@ app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 //app.use(cors());
 app.use("/posts", postRoutes);
+app.use("/", postRoutes);
 
 const PORT = process.env.PORT || 5000;
 
@@ -31,16 +32,17 @@ const PORT = process.env.PORT || 5000;
   )
   .catch((error) => console.log(error.message)); */
 
-app.use(express.static(path.join(__dirname, "./client/build")));
+/* app.use(express.static(path.join(__dirname, "./client/build")));
 
 app.get("*", function (_, res) {
+  console.log("Hello i am here");
   res.sendFile(
     path.join(__dirname, "./client/build/index.html"),
     function (err) {
       res.status(500).send(err);
     }
   );
-});
+}); */
 
 const connectDB = async () => {
   try {
@@ -58,9 +60,9 @@ const connectDB = async () => {
   }
 };
 
-app.all("*", (req, res) => {
+/* app.all("*", (req, res) => {
   res.json({ "every thing": "is awesome" });
-});
+}); */
 
 connectDB().then(() => {
   app.listen(PORT, () => {

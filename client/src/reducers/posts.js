@@ -13,6 +13,8 @@ import {
 //here state is posts and its initial value is  []
 
 const reducer = (state = { isLoading: true, posts: [] }, action) => {
+  console.log(state);
+  console.log(action);
   switch (action.type) {
     case START_LOADING:
       return { ...state, isLoading: true };
