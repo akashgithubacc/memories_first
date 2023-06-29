@@ -27,7 +27,7 @@ const Paginate = ({ page }) => {
         <PaginationItem
           {...item}
           component={Link}
-          to={`/postss?page=${item.page}`}
+          to={`/posts?page=${item.page}`}
         />
       )}
     />

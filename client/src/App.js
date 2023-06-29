@@ -21,23 +21,23 @@ const App = () => {
         <Container maxWidth="xl">
           <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
           <Routes>
-            <Route path="/" element={<Navigate to="/postss" />} />
+            <Route path="/" element={<Navigate to="/posts" />} />
 
             <Route
-              path="/postss"
+              path="/posts"
               element={
                 <Home isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
               }
             />
 
             <Route
-              path="/postss/search"
+              path="/posts/search"
               element={
                 <Home isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
               }
             />
 
-            <Route path="/postss/:id" element={<PostDetails />} />
+            <Route path="/posts/:id" element={<PostDetails />} />
 
             <Route
               path="/auth"
@@ -45,7 +45,7 @@ const App = () => {
                 !user ? (
                   <Auth isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
                 ) : (
-                  <Navigate to="/postss" />
+                  <Navigate to="/posts" />
                 )
               }
             />

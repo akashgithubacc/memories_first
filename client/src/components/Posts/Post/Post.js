@@ -23,7 +23,7 @@ const Post = ({ post, setCurrentId, isLoggedIn }) => {
   const classes = useStyles();
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const openPost = () => navigate(`/postss/${post._id}`);
+  const openPost = () => navigate(`/posts/${post._id}`);
 
   const user = JSON.parse(localStorage.getItem("profile"));
 
