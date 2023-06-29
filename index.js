@@ -32,9 +32,9 @@ const PORT = process.env.PORT || 5000;
   )
   .catch((error) => console.log(error.message)); */
 
-/* app.use(express.static(path.join(__dirname, "./client/build")));
+app.use(express.static(path.join(__dirname, "./client/build")));
 
-app.get("*", function (_, res) {
+/*app.get("*", function (_, res) {
   console.log("Hello i am here");
   res.sendFile(
     path.join(__dirname, "./client/build/index.html"),
