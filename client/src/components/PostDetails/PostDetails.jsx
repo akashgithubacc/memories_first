@@ -41,7 +41,7 @@ const PostDetails = () => {
   }
 
   const recommendedPosts = posts.filter(({ _id }) => _id !== post._id);
-  const openPost = (_id) => navigate(`/posts/${_id}`);
+  const openPost = (_id) => navigate(`/postss/${_id}`);
 
   return (
     <Paper style={{ padding: "20px", borderRadius: "15px" }} elevation={6}>
