@@ -36,7 +36,7 @@ const Home = ({ isLoggedIn }) => {
     if (search.trim() || tags) {
       dispatch(getPostBySearch({ search, tags: tags.join(",") }));
       navigate(
-        `/postss/search?searchQuery=${search || "none"}&tags=${tags.join(",")}`
+        `/posts/search?searchQuery=${search || "none"}&tags=${tags.join(",")}`
       );
     } else {
       navigate("/");

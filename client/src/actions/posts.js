@@ -75,7 +75,7 @@ export const createPost = (post, navigate) => async (dispatch) => {
     dispatch({ type: START_LOADING });
     const { data } = await api.createPost(post);
 
-    navigate(`/postss/${data._id}`);
+    navigate(`/posts/${data._id}`);
 
     dispatch({ type: CREATE, payload: data });
     dispatch({ type: END_LOADING });
@@ -88,7 +88,7 @@ export const updatePost = (id, post, navigate) => async (dispatch) => {
   try {
     dispatch({ type: START_LOADING });
     const { data } = await api.updatePost(id, post);
-    navigate(`/postss/${data._id}`);
+    navigate(`/posts/${data._id}`);
     dispatch({ type: UPDATE, payload: data });
     dispatch({ type: END_LOADING });
   } catch (error) {
